@@ -1,0 +1,11 @@
+#gallery-img {
+    /* Restrict maximum width and height */
+    max-width: 500px;
+    max-height: 400px;
+
+    /* Preserve picture proportions without stretching */
+    object-fit: contain;
+
+    /* Optional: Ensure image acts as a block element */
+    display: block;
+}

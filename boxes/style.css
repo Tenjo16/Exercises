@@ -1,0 +1,33 @@
+.outer-box {
+    width: 400px;
+
+    height: 400px;
+
+    border: 8px solid red;
+
+    position: relative;
+
+    border-radius: 8%;
+}
+
+.box-top {
+    width: 100px;
+    height: 100px;
+    border: 8px solid blue;
+    position: absolute;
+    top: 8;
+    left: 8;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.box-bottom {
+    width: 100px;
+    height: 100px;
+    border: 8px solid blue;
+    position: absolute;
+    bottom: 8;
+    right: 8;
+    border-radius: 100%;
+    background-color: black;
+}

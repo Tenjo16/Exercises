@@ -1,0 +1,24 @@
+.canvas {
+    text-align: center;
+}
+
+.display {
+    border: 2px solid black;
+    background-color: greenyellow;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 4px;
+    width: fit-content;
+}
+
+.bongo {
+    position: relative;
+}
+
+.bongocat {
+    position: absolute;
+    left: 256;
+    margin-top: -12;
+    width: 10%;
+}

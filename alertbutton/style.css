@@ -1,0 +1,19 @@
+.h1 {
+    text-align: center;
+}
+
+.button {
+    display: block;
+    margin: 20px auto;
+}
+
+
+.dd {
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.dd img {
+    width: 400px;
+}

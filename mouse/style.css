@@ -1,0 +1,5 @@
+#follower {
+    position: absolute;
+    font-size: 3rem;
+    transform: translate(-50%, -50%);
+}
