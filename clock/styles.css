@@ -1,0 +1,17 @@
+/* Reset margins and center content on the full screen */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f172a;
+    font-family: monospace;
+}
+
+/* Style the clock display box */
+#clock {
+    font-size: 4rem;
+    color: #38bdf8;
+    letter-spacing: 4px;
+}
