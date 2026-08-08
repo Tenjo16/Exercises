@@ -1,0 +1,11 @@
+#sky {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+#balloon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
