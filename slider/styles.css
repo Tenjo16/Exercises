@@ -1,0 +1,35 @@
+/* Styling for the outer wrapper layout */
+#custom-slider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 300px;
+}
+
+/* Styling for the slider track container */
+#slider-track {
+    position: relative;
+    flex: 1;
+    height: 8px;
+    background-color: #cccccc;
+    border-radius: 4px;
+}
+
+/* Styling for the interactive slider knob */
+#slider-knob {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+/* Styling for the numeric readout text */
+#slider-value {
+    font-family: sans-serif;
+    font-weight: bold;
+}
