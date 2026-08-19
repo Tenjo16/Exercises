@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipjar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="mood-emoji" style="font-size: 80px;">😢</div>
+
+    <h2>Total Tips: $<span id="tip-amount">0.00</span></h2>
+
+    <p>Coins Dropped: <span id="coin-count">0</span></p>
+
+    <div id="milestone-banner" style="font-weight: bold; color: green;"></div>
+
+    <div id="btn-container">
+        <button id="btn-25" data-value="0.25">+$0.25</button>
+        <button id="btn-100" data-value="1.00">+$1.00</button>
+        <button id="btn-500" data-value="5.00">+$5.00</button>
+        <button id="btn-reset">Reset Jar</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
