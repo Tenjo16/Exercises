@@ -1,0 +1,35 @@
+#marquee-container {
+    display: flex;
+    gap: 6px;
+    border: solid red;
+    width: fit-content;
+    margin: 0;
+    font-size: 100px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background-color: aqua;
+    position: relative;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+#marquee-container::before {
+    content: '🎂';
+    /* Places a cake emoji on the left side */
+    position: absolute;
+    left: -40px;
+    /* Pushes the cake outside the left border */
+}
+
+#marquee-container::after {
+    content: '🎂';
+    /* Places a cake emoji on the right side */
+    position: absolute;
+    right: -40px;
+    /* Pushes the cake outside the right border */
+}

@@ -1,0 +1,40 @@
+body {
+    background-color: #48487b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh
+}
+
+#hero-card {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    background-color: #3755a8;
+    padding: 5px;
+}
+
+.meter-track {
+    background-color: #000000;
+    height: 20px;
+    width: 100%;
+    border: 1px solid #ffffff;
+}
+
+#hp-fill {
+    height: 100%;
+    width: 100%;
+    background-color: #e94560;
+}
+
+#mp-fill {
+    height: 100%;
+    width: 100%;
+    background-color: #00fff5;
+}
+
+#controls {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
