@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(131, 135, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+#pet-img {
+    max-width: 200px;
+    height: auto;
+}
