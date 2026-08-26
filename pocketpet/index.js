@@ -30,6 +30,9 @@ function render() {
             petDisplay.textContent = '❓ Unknown state.';
     }
 
+
+
+    //Each time the website renders, will disable buttons based on what's already active.
     document.getElementById('btn-feed').disabled = (currentState === 'FEEDING');
     document.getElementById('btn-play').disabled = (currentState === 'PLAYING');
     document.getElementById('btn-sleep').disabled = (currentState === 'SLEEPING');
@@ -47,7 +50,7 @@ controls.addEventListener('click', function (event) {
 
 function changeState(newState) {
     if (currentState == 'SLEEPING' && newState !== 'IDLE') {
-        petDisplay.innerHTML = "😴 He's still eeping! You gotta wake him up (Gently.) <br> Poke him 10x to woke!";
+        petDisplay.innerHTML = `😴 He's still eeping! You gotta wake him up (Gently.) <br> Poke him ${wakeUp}x to woke!`;
         return;
     } else {
         currentState = newState;
@@ -58,7 +61,7 @@ function changeState(newState) {
 image.addEventListener('click', function (event) {
     if (currentState == 'SLEEPING') {
         wakeUp--;
-        petDisplay.innerHTML = `😴 He's still eeping! You gotta wake him up (Gently.) <br> Poke him ${wakeUp}x to wake!`;
+        petDisplay.innerHTML = `😴 He's still eeping! You gotta wake him up (Gently.) <br> Poke him ${wakeUp}x to woke!`;
     }
 
     if (wakeUp <= 0) {

@@ -1,0 +1,15 @@
+#game-grid {
+    display: flex;
+    gap: 15px;
+}
+
+.slot {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+.slot.active {
+    background-color: rgb(10, 128, 10);
+}
