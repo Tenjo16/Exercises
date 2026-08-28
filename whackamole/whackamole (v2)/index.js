@@ -39,19 +39,19 @@ function createSlot(container) {
         }, randomDelay);
     }
     element.classList.add('slot');
-    element.textContent = '😴'; // Start as a sleeping mole
+    element.textContent = '😳'; // Start as a sleeping mole
 
     element.addEventListener('click', function () {
-        if (!isSleeping) {
+        if (isSleeping) {
             window.dispatchEvent(new CustomEvent('game:hit'));
-            sleep();
+            wakeUp();
         } else {
             window.dispatchEvent(new CustomEvent('game:miss'));
         }
     });
 
     container.appendChild(element);
-    sleep();
+    wakeUp();
 }
 
 const board = document.getElementById('game-board');
