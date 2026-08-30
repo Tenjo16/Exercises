@@ -51,7 +51,7 @@ function createSlot(container) {
     });
 
     container.appendChild(element);
-    wakeUp();
+    wakeUp(); // Start the game by waking up all moles
 }
 
 const board = document.getElementById('game-board');
