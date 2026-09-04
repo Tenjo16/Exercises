@@ -1,0 +1,36 @@
+body {
+    background-color: rgba(231, 176, 109, 0.765);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+#tent {
+    text-align: center;
+    background-color: pink;
+    padding: 10px;
+    border: 6px solid aqua;
+    border-radius: 5px
+}
+
+#balloon-shelf {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.balloon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(149, 149, 149, 0.623);
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 8px;
+    overflow: hidden;
+}
