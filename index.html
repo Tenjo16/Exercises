@@ -5,41 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Dev Projects</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background-color: #f4f6f9;
-            margin: 0;
-            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         h1 {
-            margin-bottom: 8px;
             color: #222;
         }
 
-        p.subtitle {
+        .subtitle {
             color: #666;
-            margin-bottom: 30px;
         }
 
         .project-grid {
             display: grid;
+            /* Fit as many 200px-wide cards per row as can fit, making it
+            automatically responsive */
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 16px;
             width: 100%;
             max-width: 900px;
+            /* Prevents other cards from staying expanded when clicking other cards
+            due to this class being on a grid, all cards will want to match each
+            other in their row. Ex. with Whack a Mole and Balloon Pop */
+            align-items: start;
         }
 
-        /* Base styling for simple link cards */
         .project-card {
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 16px 20px;
+            box-sizing: border-box;
+
             background-color: #ffffff;
             color: #333;
             text-decoration: none;
@@ -47,11 +51,12 @@
             border-radius: 8px;
             border: 1px solid #e0e0e0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            /* Animations for hover. ease makes smoother transition */
             transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
-            box-sizing: border-box;
         }
 
         .project-card:hover {
+            /* Slightly moves upwards */
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             background-color: #007acc;
@@ -59,7 +64,6 @@
             border-color: #007acc;
         }
 
-        /* Interactive card styling for subfolder projects */
         .project-card-interactive {
             background-color: #ffffff;
             border: 1px solid #e0e0e0;
@@ -69,7 +73,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             cursor: pointer;
             transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
             user-select: none;
@@ -88,19 +91,15 @@
             transition: margin-bottom 0.2s, color 0.2s;
         }
 
-        /* Hidden subfolder links container */
         .version-options {
             display: flex;
             gap: 8px;
             max-height: 0;
             opacity: 0;
+            /* Prevents sublink buttons from being visible/still clickable
+            despite being collapsed within its project group */
             overflow: hidden;
             transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
-        }
-
-        /* Expanded active state */
-        .project-card-interactive.active {
-            border-color: #007acc;
         }
 
         .project-card-interactive.active .project-title {
@@ -114,7 +113,6 @@
             margin-top: 4px;
         }
 
-        /* Version sub-buttons */
         .version-link {
             padding: 6px 12px;
             background-color: #f0f4f8;
@@ -126,27 +124,17 @@
             border: 1px solid #d0e0f0;
             transition: background-color 0.15s, color 0.15s;
         }
-
-        .version-link:hover {
-            background-color: #007acc;
-            color: #ffffff;
-        }
     </style>
+
 </head>
 
 <body>
 
-    <h1>Project Portfolio</h1>
-    <p class="subtitle">Select a project to launch</p>
-
+    <!-- Add your h1 and subtitle paragraph here -->
+    <h1>My Project Portfolio</h1>
+    <p class="subtitle">Select a project </p>
+    <!-- Add your div with class="project-grid" containing the two <a> links here -->
     <div class="project-grid">
-
-        <a href="./alertbutton/" class="project-card">Alert Button</a>
-        <a href="./balloonpop/" class="project-card">Balloon Pop</a>
-        <a href="./bounce/" class="project-card">Bounce</a>
-        <a href="./boxes/" class="project-card">Boxes</a>
-        <a href="./calculator/" class="project-card">Calculator</a>
-        <a href="./clock/" class="project-card">Clock</a>
         <a href="./dice/" class="project-card">Dice</a>
         <a href="./dragging/" class="project-card">Dragging</a>
         <a href="./gens/" class="project-card">Gens</a>
@@ -166,25 +154,15 @@
         <a href="./tipjar/" class="project-card">Tip Jar</a>
         <a href="./todolist/" class="project-card">To-Do List</a>
 
-        <!-- Interactive Whack-a-Mole (Handles Subfolders) -->
+        <!-- Interactive Card Scaffold -->
         <div class="project-card-interactive">
-            <span class="project-title">Whack-a-Mole ▾</span>
+            <span class="project-title">Whack a Mole ▾</span>
             <div class="version-options">
                 <a href="./whackamole/" class="version-link">v1</a>
                 <a href="./whackamole/whackamolev2/" class="version-link">v2</a>
                 <a href="./whackamole/whackamolev3/" class="version-link">v3</a>
             </div>
         </div>
-
-        <!-- Interactive Cookie Clicker (Handles Subfolders) -->
-        <div class="project-card-interactive">
-            <span class="project-title">Cookie Clicker ▾</span>
-            <div class="version-options">
-                <a href="./cookieclicker/" class="version-link">v1</a>
-                <a href="./cookieclicker/cookieclickerv2/" class="version-link">v2</a>
-            </div>
-        </div>
-
         <div class="project-card-interactive">
             <span class="project-title">Balloon Pop ▾</span>
             <div class="version-options">
@@ -192,33 +170,35 @@
                 <a href="./balloonpop/balloonpop2/" class="version-link">v2</a>
             </div>
         </div>
-
+        <div class="project-card-interactive">
+            <span class="project-title">Cookie Clicker ▾</span>
+            <div class="version-options">
+                <a href="./balloonpop/" class="version-link">v1</a>
+                <a href="./balloonpop/balloonpop2/" class="version-link">v2</a>
+            </div>
+        </div>
     </div>
-
     <script>
-        // Toggle interactive card expansion for subfolders
         const interactiveCards = document.querySelectorAll('.project-card-interactive');
 
         interactiveCards.forEach(function (card) {
             card.addEventListener('click', function (e) {
-                // Ignore clicks directly on subfolder version links so navigation triggers normally
+                // Check if the clicked target contains 'version-link'
                 if (e.target.classList.contains('version-link')) {
                     return;
                 }
-
-                // Close other open cards before opening the selected one
+                // Loop through all interactive cards
                 interactiveCards.forEach(function (otherCard) {
+                    // If otherCard is NOT the card we just clicked, close it
                     if (otherCard !== card) {
                         otherCard.classList.remove('active');
                     }
                 });
-
-                // Toggle current card active state
+                // Toggle 'active' on card.classList
                 card.classList.toggle('active');
             });
         });
     </script>
-
 </body>
 
 </html>
