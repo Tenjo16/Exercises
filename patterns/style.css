@@ -5,3 +5,22 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.pad {
+    width: 90px;
+    height: 90px;
+    font-size: 2.2rem;
+    border-radius: 12px;
+    /* Fade in color and animations for pad.lit */
+    transition: transform 0.1s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.pad.lit {
+    background-color: #ffd700;
+    border-color: #ffffff;
+    box-shadow: 0 0 20px #ffd700;
+    transform: scale(1.05);
+}
