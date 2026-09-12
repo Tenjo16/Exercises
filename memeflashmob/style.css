@@ -1,0 +1,25 @@
+h1 {
+    color: red;
+}
+
+#hype-meter {
+    color: red;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-size: cover;
+}
+
+#dance-floor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
