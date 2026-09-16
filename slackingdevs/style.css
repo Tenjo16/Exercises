@@ -1,0 +1,79 @@
+#office-floor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 equal columns for 6 workstation cards */
+    gap: 16px;
+    padding: 20px;
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #1e1e2e;
+    color: #fff;
+}
+
+#emergency-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#activity-log {
+    max-height: 150px;
+    overflow-y: auto;
+    background: #11111b;
+    color: #a6adc8;
+    padding: 12px;
+    margin: 20px;
+    font-family: monospace;
+}
+
+#app {
+    max-width: 1000px;
+    (sets maximum width bound) margin: 20px auto;
+    (centers app horizontally on screen) font-family: system-ui, sans-serif;
+    (applies clean system font)
+}
+
+#hud span {
+    background: #313244;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.workstation-card {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    border: 2px solid #45475a;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.workstation-card.alert {
+    border-color: #f38ba8;
+    background: #31212d;
+    animation: pulse 1s infinite alternate;
+}
+
+.workstation-card.fired {
+    opacity: 0.5;
+    border-color: #6c7086;
+}
+
+.visual-display {
+    font-size: 2.5rem;
+}
