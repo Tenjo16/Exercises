@@ -23,6 +23,15 @@
             color: #666;
         }
 
+        .section-header {
+            width: 100%;
+            max-width: 900px;
+            color: #333;
+            margin-top: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 8px;
+        }
+
         .project-grid {
             display: grid;
             /* Fit as many 200px-wide cards per row as can fit, making it
@@ -130,10 +139,12 @@
 
 <body>
 
-    <!-- Add your h1 and subtitle paragraph here -->
     <h1>My Project Portfolio</h1>
-    <p class="subtitle">Select a project </p>
-    <!-- Add your div with class="project-grid" containing the two <a> links here -->
+    <p class="subtitle">Select a project</p>
+
+    <!-- VANILLA JAVASCRIPT SECTION -->
+    <h2 class="section-header">🍦 Vanilla JavaScript Projects</h2>
+
     <div class="project-grid">
         <a href="./dice/" class="project-card">Dice</a>
         <a href="./dragging/" class="project-card">Dragging</a>
@@ -154,14 +165,12 @@
         <a href="./tipjar/" class="project-card">Tip Jar</a>
         <a href="./todolist/" class="project-card">To-Do List</a>
         <a href="./patterns/" class="project-card">Patterns</a>
-        <a href="./patterns/" class="project-card">Patterns</a>
         <a href="./cookieclicker/" class="project-card">Cookie Clicker</a>
         <a href="./lightsgrid/" class="project-card">Lights Grid Matrix</a>
         <a href="./memeflashmob/" class="project-card">Memeflashmob</a>
+        <a href="./slackingdevs/" class="project-card">Slacking Devs</a>
 
-        <a href="./slackingdevs/" class="project-card">Slackingdevs</a>
-
-        <!-- Interactive Card Scaffold -->
+        <!-- Interactive Cards -->
         <div class="project-card-interactive">
             <span class="project-title">Whack a Mole ▾</span>
             <div class="version-options">
@@ -178,25 +187,33 @@
             </div>
         </div>
     </div>
+
+    <!-- REACT PROJECTS SECTION -->
+    <h2 class="section-header" style="margin-top: 40px;">⚛️ React Projects</h2>
+
+    <div class="project-grid">
+        <a href="./balloonroulette/" class="project-card">
+            🎈 Balloon Roulette
+        </a>
+    </div>
+
     <script>
         const interactiveCards = document.querySelectorAll('.project-card-interactive');
 
         interactiveCards.forEach(function (card) {
             card.addEventListener('click', function (e) {
-                // Check if the clicked target contains 'version-link'
                 if (e.target.classList.contains('version-link')) {
                     return;
                 }
-                // Loop through all interactive cards
                 interactiveCards.forEach(function (otherCard) {
-                    // If otherCard is NOT the card we just clicked, close it
                     if (otherCard !== card) {
                         otherCard.classList.remove('active');
                     }
                 });
-                // Toggle 'active' on card.classList
                 card.classList.toggle('active');
             });
         });
     </script>
 </body>
+
+</html>
