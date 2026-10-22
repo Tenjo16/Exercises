@@ -1,0 +1,20 @@
+.app-container{
+    padding: 40px;
+    text-align: center;
+}
+
+.dropbox{
+    border: 2px dashed #333;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fruit-item{
+    font-size: 40px;
+    cursor: grab;
+}
