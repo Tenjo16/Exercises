@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.lights {
+  font-size: 2rem;
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.lights-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+}
+
+.images img,
+.images video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Use 'contain' to see the whole small cat, or 'cover' to fill the box */
+}
